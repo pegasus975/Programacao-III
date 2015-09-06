@@ -18,9 +18,12 @@ import javax.swing.JTextField;
  */
 public class FCampoTexto extends JTextField implements MouseListener, KeyListener{
     private int tamanhoCampo; 
+    Color c;
     
     public FCampoTexto(int tamanho){
+        this.c = new Color(233, 233, 233);
         addKeyListener( this );
+        addMouseListener(this);
         tamanhoCampo = tamanho;
     }
     
@@ -35,11 +38,14 @@ public class FCampoTexto extends JTextField implements MouseListener, KeyListene
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        this.setBackground(Color.red);
+        setBackground(c);
+        
     }
     
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+        setBackground(Color.white);
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -47,8 +53,7 @@ public class FCampoTexto extends JTextField implements MouseListener, KeyListene
             JTextField txt = (JTextField) e.getSource();
             if(txt.getText().length() >= tamanhoCampo){
                 e.consume();
-            }
-            
+            }            
         }
     }
     

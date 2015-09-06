@@ -25,7 +25,7 @@ public class UseComponents extends JFrame {
         Container container = getContentPane();
         container.setBackground(new Color(255, 255, 255));
 	
-        createTextField("Nome",0);
+        createTextField("Nome", 0);
         pulaLinha();
         createTextField("Sobrenome", 10);
         
