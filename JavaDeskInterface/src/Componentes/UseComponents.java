@@ -28,8 +28,9 @@ public class UseComponents extends JFrame {
         createTextField("Nome", 0);
         pulaLinha();
         createTextField("Sobrenome", 10);
-        
-        
+        pulaLinha();
+        createNumberField("Idade", 2);
+        pulaLinha();
         setVisible( true );
 	setDefaultCloseOperation( DISPOSE_ON_CLOSE );
     }
@@ -40,6 +41,16 @@ public class UseComponents extends JFrame {
         getContentPane().add(lb);
 
         FCampoTexto ct = new FCampoTexto(tam);
+        ct.setBounds(80, nrLinha, 200, 27);
+        getContentPane().add(ct);
+    }
+    
+    public void createNumberField(String nomeL, int tam){
+        JLabel lb = new JLabel(nomeL);
+        lb.setBounds(10, nrLinha, 70, 27);
+        getContentPane().add(lb);
+
+        FCampoNumerico ct = new FCampoNumerico(tam);
         ct.setBounds(80, nrLinha, 200, 27);
         getContentPane().add(ct);
     }

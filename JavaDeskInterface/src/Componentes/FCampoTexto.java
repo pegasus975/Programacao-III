@@ -51,6 +51,7 @@ public class FCampoTexto extends JTextField implements MouseListener, KeyListene
     public void keyTyped(KeyEvent e) {
         if (tamanhoCampo > 0){
             JTextField txt = (JTextField) e.getSource();
+ 
             if(txt.getText().length() >= tamanhoCampo){
                 e.consume();
             }            

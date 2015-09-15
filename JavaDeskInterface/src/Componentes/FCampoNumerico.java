@@ -17,13 +17,12 @@ public class FCampoNumerico extends FCampoTexto implements KeyListener{
 
     public FCampoNumerico(int tamanho) {
         super(tamanho);
-    }
-        @Override
-    public void keyTyped(KeyEvent e) {
-        char ch = e.getKeyChar();
-        if (ch < 0 || ch > 9){
-            e.consume();
+        if (tamanho == 0){
+            tamanho = 5;
         }
-                       
     }
+    /*@Override
+    public void keyTyped(KeyEvent e) {
+                       
+    }*/
 }
